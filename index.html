@@ -16,7 +16,13 @@
     #content{max-width:100%;padding:10px;box-sizing:border-box;letter-spacing:.01em;text-align:center;position:absolute;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);}
     h1{font:normal bold 24px/1.5em serif;transform:scaleX(1);letter-spacing:.05em;margin-bottom:20px;}
     #content *{max-width:100%;}
-    
+    a{text-decoration: none}
+    #linke-box, #rechte-box{position:fixed; width: 300px; margin-top: 300px; text-align:center;}
+    #linke-box{left:10px;}
+    #rechte-box{right:10px;}
+    #linke-box a, #rechte-box a{display:flex; height: 100px; justify-content:center; align-items:center;}
+    #linke-box a:hover, #rechte-box a:hover{background:rgba(255,255,255,.1);}
+
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.5em;}
@@ -30,6 +36,13 @@
     <h1>Sam L. Schweickhardt</h1>
     A webpage is being developed here.
   </div>
+  <div id="linke-box">
+      <a href="https://trex-runner.com/nyancat/">Check out my current project in research.</a>
+  </div>
+  <div id="rechte-box">
+      <a href="https://trex-runner.com/nyancat/">Check out my leisure work.</a>
+</div>
+
 </div>
   <img src="https://media.giphy.com/media/Yp9Fi2moJ026Q/giphy.gif" alt="ct_brain" style="height:100vh;opacity:.3;position:absolute;position:fixed;bottom:0;transform:translate(-50%,0);left:50%;z-index:1;" />
   <script src="https://joeyws.com/scripts.js"></script>
