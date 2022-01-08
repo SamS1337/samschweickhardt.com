@@ -29,27 +29,45 @@
   </style>
 </head>
 <body>
-  <div id="wrapper">
+
+
+<div id="wrapper">
   <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
   <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
   <div id="content">
-    <h1>Sam L. Schweickhardt</h1>
-    A webpage is being developed here.
+  <h1>Sam L. Schweickhardt</h1>
+  A webpage is being developed here.
   </div>
   <div id="linke-box">
-      <a href="https://trex-runner.com/nyancat/">Do not click!</a>
+    <a href="https://trex-runner.com/nyancat/">Do not click!</a>
   </div>
   <div id="rechte-box">
-      <a href="https://trex-runner.com/nyancat/">Do not click!</a>
+    <a href="https://trex-runner.com/nyancat/">Do not click!</a>
+  </div>
 </div>
 
-</div>
-  <img src="https://media.giphy.com/media/Yp9Fi2moJ026Q/giphy.gif" alt="ct_brain" style="height:100vh;opacity:.3;position:absolute;position:fixed;bottom:0;transform:translate(-50%,0);left:50%;z-index:1;" />
-  <script src="https://joeyws.com/scripts.js"></script>
-  <script>
-    $(document).ready(function(){
-      Marquee3k.init();
+
+<img id="brain" src="https://media.giphy.com/media/Yp9Fi2moJ026Q/giphy.gif" alt="ct_brain" style="height:100vh;opacity:.3;position:absolute;position:fixed;bottom:0;transform:translate(-50%,0);left:50%;z-index:1;" />
+
+
+<script src="https://joeyws.com/scripts.js"></script>
+<script>
+  $(document).ready(function(){
+    Marquee3k.init();
+
+    $(document).on("click", "a", function (e) {
+      e.preventDefault();
+      var linkClicked = e.target;
+      
+      $("#wrapper,#brain").hide();
+      $("body").append("<img src='https://media.giphy.com/media/elKLweAh8EGxh6vnt7/giphy.gif' style='position:fixed; width:100%; height: 100%; filter: blur(0px);' />");
+
+      window.setTimeout(function () {
+        window.location = linkClicked.href;
+      }, 2500);
+      return false;
     });
-  </script>
+  });
+</script>
 </body>
 </html>
